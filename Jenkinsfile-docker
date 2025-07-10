@@ -35,7 +35,7 @@ pipeline {
     stage('Tag Docker Image') {
       agent { label 'controller' }
       steps {
-        sh 'docker image tag ingjeon/myweb:$BUILD_NUMBER ingjeon/myweb:latest
+        sh 'docker image tag ingjeon/myweb:$BUILD_NUMBER ingjeon/myweb:latest'
       }
     }
     stage('Publish Docker Image') {

@@ -71,7 +71,7 @@ pipeline {
         dockerhubRepo = 'myweb' //hello-world
       }
       steps {
-        container('git') {
+        container('maven') {
           git branch: 'main', credentialsId: 'github-credential', url: "${githubURL}"
           sh "git config --global --add safe.directory ${workspace}"
           sh "git config --global user.name ${githubUser}"

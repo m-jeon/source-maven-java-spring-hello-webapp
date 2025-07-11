@@ -62,13 +62,13 @@ pipeline {
     }
     stage('Update K8s Manifests & Push') {
       environment {
-        githubUser = m-jeon //Ryan Jang
-        githubEmail = minjae77777@naver.com //myaccount@example.com
-        githubId = m-jeon //myaccount 
-        githubRepo = cicd-yaml //jenkins-kube-deploy
+        githubUser = 'm-jeon' //Ryan Jang
+        githubEmail = 'minjae77777@naver.com' //myaccount@example.com
+        githubId = 'm-jeon' //myaccount 
+        githubRepo = 'cicd-yaml' //jenkins-kube-deploy
         githubURL = "https://github.com/${githubId}/${githubRepo}.git"
-        dockerhubId = ingjeon //myaccount
-        dockerhubRepo = myweb //hello-world
+        dockerhubId = 'ingjeon' //myaccount
+        dockerhubRepo = 'myweb' //hello-world
       }
       steps {
         container('git') {

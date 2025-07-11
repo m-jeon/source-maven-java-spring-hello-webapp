@@ -65,10 +65,10 @@ pipeline {
         githubUser = 'm-jeon' //Ryan Jang
         githubEmail = 'minjae77777@naver.com' //myaccount@example.com
         githubId = 'm-jeon' //myaccount 
-        githubRepo = 'argo-test' //jenkins-kube-deploy
+        githubRepo = 'cicd-yaml' //jenkins-kube-deploy
         githubURL = "https://github.com/${githubId}/${githubRepo}.git"
         dockerhubId = 'ingjeon' //myaccount
-        dockerhubRepo = 'myweb-k8s-jenkins' //hello-world
+        dockerhubRepo = 'myweb' //hello-world
       }
       steps {
         container('git') {

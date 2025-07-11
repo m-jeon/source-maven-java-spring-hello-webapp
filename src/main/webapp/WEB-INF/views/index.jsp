@@ -1,7 +1,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html>
 <head>
-<title>JMJ Hello Hello</title>
+<title>Hello ARGO World</title>
 </head>
 <body>
 <h1>${msg}</h1>

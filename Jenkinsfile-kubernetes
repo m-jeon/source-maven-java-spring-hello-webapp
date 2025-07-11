@@ -12,6 +12,12 @@ pipeline {
             - sleep
             args:
             - infinity
+          - name: git
+            image: alpine/git
+            command:
+            - sleep
+            args:
+            - infinity
           - name: kaniko
             image: gcr.io/kaniko-project/executor:debug
             command:
@@ -71,7 +77,7 @@ pipeline {
         dockerhubRepo = 'myweb' //hello-world
       }
       steps {
-        container('maven') {
+        container('git') {
           git branch: 'main', credentialsId: 'github-credential', url: "${githubURL}"
           sh "git config --global --add safe.directory ${workspace}"
           sh "git config --global user.name ${githubUser}"
